@@ -1,10 +1,9 @@
 const mongoose = require("mongoose");
-const userDB = process.env.USERDB;
-const passDB = process.env.PASSDB;
+const DB = process.env.DB_PASS_USER;
 
 const connectDB = async () => {
   try {
-    const keyDB = mongoose.connect(`mongodb+srv://${userDB}:${passDB}@cluster0.tjiaprr.mongodb.net/?retryWrites=true&w=majority`);
+    const keyDB = mongoose.connect(DB);
     console.log("DB connected");
     return keyDB;
   } catch (err) {
