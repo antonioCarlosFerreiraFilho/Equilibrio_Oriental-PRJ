@@ -4,7 +4,6 @@ require("./config/db.js");
 const express = require("express");
 const app = express();
 
-const PORT = process.env.PORT || 7667;
 const cors = require("cors");
 const path = require("path");
 
@@ -23,7 +22,4 @@ const route = require("./routes/Router.js");
 app.use(route);
 
 
-app.listen(PORT, ()=> {
-
-  console.log("http://localhost:" + PORT);
-});
+app.listen(process.env.PORT || 7667);
