@@ -4,7 +4,7 @@ require("./config/db.js");
 const express = require("express");
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 7667;
 const cors = require("cors");
 const path = require("path");
 
