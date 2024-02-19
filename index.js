@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 //url Front-end
-app.use(cors({credentials: true, origin: "http://localhost:3000"}));
+app.use(cors());
 
 //path static images
 app.use("/uploads", express.static("uploads"));
